@@ -26,8 +26,10 @@ def show_phone(args, contacts):
         return "Contact doesn’t exist."
     
 def show_all(contacts):
+    contacts_str = ''
     for key, value in contacts.items():
-        print(f"{key} {value}")
+        contacts_str += f"{key} {value}\n"
+    return contacts_str.strip()
 
 def main():
     contacts = {}
@@ -48,7 +50,7 @@ def main():
         elif command == "phone":
             print(show_phone(args, contacts))
         elif command == "all":
-            show_all(contacts)
+            print(show_all(contacts))
         else:
             print("Invalid command.")
 
