@@ -10,7 +10,7 @@ def total_salary(path: str) -> tuple:
                 return (0, 0) 
             for item in lines:
                 _, salary = item.split(",")
-                total += int(salary)
+                total += float(salary)
             return (total, total / len(lines)) 
     except Exception as e:
         print(f"Error occurred: {e}")
